@@ -7,7 +7,7 @@ import com.mongodb.client.MongoDatabase;
 public class QuickStart {
     public static void main( String[] args ) {
         // Replace the placeholder with your MongoDB deployment's connection string
-        String uri = "mongodb+srv://avasaydam:<db_password>@shelfsaver.fvczy.mongodb.net/?retryWrites=true&w=majority&appName=ShelfSaver";
+        String uri = "mongodb+srv://avasaydam:<ShelfSaver>@shelfsaver.fvczy.mongodb.net/?retryWrites=true&w=majority&appName=ShelfSaver";
         try (MongoClient mongoClient = MongoClients.create(uri)) {
             MongoDatabase database = mongoClient.getDatabase("sample_mflix");
             MongoCollection<Document> collection = database.getCollection("movies");
