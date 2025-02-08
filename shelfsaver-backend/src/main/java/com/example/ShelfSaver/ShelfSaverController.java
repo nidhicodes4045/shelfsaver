@@ -1,14 +1,15 @@
 package com.example.ShelfSaver;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestParam;
 
 // RestController flag indicates that this class is ready for use by Spring MVC to handle web requests
 // It combines @Controller and @ResponseBody, 2 annotations that result in web requests returning data rather than a view
 @RestController
+// Enable CORS to allow request from the React frontend
+@CrossOrigin(origins = "http://localhost:5173/")
 @RequestMapping("/api")
 public class ShelfSaverController {
     // Map '/' to the index() method
@@ -19,5 +20,10 @@ public class ShelfSaverController {
      */
     public String index() {
         return "Hello, World!";
+    }
+
+    @GetMapping("/test")
+    public String getTest() {
+        return "Test String";
     }
 }
