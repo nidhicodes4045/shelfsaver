@@ -14,6 +14,6 @@ public class ShelfSaverController {
      * @return String to be returned when the controller is invoked from browser or the command line
      */
     public String index() {
-        return "Hello, World!";
+        return "Hello, World!\n";
     }
 }

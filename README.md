@@ -9,3 +9,4 @@ Navigate to root directory of project and run:
 ```
 mvn spring-boot:run
 ```
+Use ```Ctrl + C``` to stop running the application.
