@@ -1,3 +1,4 @@
+package com.example.ShelfSaver;
 
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
