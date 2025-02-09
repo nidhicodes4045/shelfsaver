@@ -47,8 +47,6 @@ function App() {
 
   return (
     <>
-      <h3 className='glowing-text'>&lt;ShelfSaver&gt;</h3>
-      <img src='src/assets/wizard.png' height={300}></img>
       <Login/>
     </>
   )
