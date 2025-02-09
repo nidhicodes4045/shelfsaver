@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
+import ReactSearchBox from "react-search-box";
 import axios from 'axios';
 import '../assets/styles/ItemForm.css';
 
@@ -177,6 +178,7 @@ export function ItemForm() {
 
     return (
         <>
+            <ReactSearchBox placeholder='Search for items' value='search'/>
             <form onSubmit={createItem}>
                 <fieldset>
                 <p>Add an Item:</p>
