@@ -15,11 +15,14 @@ import SignUpBuyer from './SignUpBuyer';
 import SignUpSeller from './SignUpSeller';
 import { ItemForm } from './components/Item';
 import './App.css'
+import User from './components/User';
 
 function Login() {
 	const [showSignUpBuyer, setShowSignUpBuyer] = useState(false);
 	const [showSignUpSeller, setShowSignUpSeller] = useState(false);
 	const [showAddItem, setShowAddItem] = useState(false);
+	const [showUser, setShowUser] = useState(false);
+
 
 
 	if (showSignUpBuyer) {
@@ -32,6 +35,9 @@ function Login() {
 		return <><h3 className='glowing-text'>&lt;ShelfSaver&gt;</h3>
       <img src='src/assets/wizard.png' height={300}></img>
       <ItemForm/></>
+	}
+	if (showUser) {
+		return <User/>
 	}
 
 
@@ -49,9 +55,18 @@ function Login() {
 
               <MDBInput wrapperClass='mb-4 mx-5 w-55 user-input custom-input-width' labelClass='text-white textbox-label' label='Username' id='formControlLg' type='username' size="lg"/>
 			  <MDBInput wrapperClass='mb-4 mx-5 w-100 user-input custom-input-width' labelClass='text-white textbox-label' label='Password' id='formControlLg' type='password' size="lg"/>
-			<MDBBtn outline className='mx-5 mb-4 px-5 hover-overlay hover-light custom-btn large-btn' color='white' size='lg' onClick={() => setShowAddItem(true)}>
-					Login
-			  </MDBBtn>
+				<MDBRow>
+				<MDBCol size='auto'>
+				<MDBBtn outline className='mx-5 mb-4 px-5 hover-overlay hover-light custom-btn medium-btn' color='white' size='lg' onClick={() => setShowAddItem(true)}>
+					Login as Seller
+			  	</MDBBtn>
+				</MDBCol>
+				<MDBCol size='auto'>
+				<MDBBtn outline className='mx-5 mb-4 px-5 hover-overlay hover-light custom-btn medium-btn' color='white' size='lg' onClick={() => setShowUser(true)}>
+					Login as Buyer
+			  	</MDBBtn>
+				</MDBCol>
+				</MDBRow>
 
               <div className="mt-4">
 				<p style={{ marginTop: 0, paddingTop: 0 }} className="mb-0 directions no-margin">Don&#39;t have an account? Sign up as a:</p>
