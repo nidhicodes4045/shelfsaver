@@ -14,7 +14,7 @@ export default function User() {
             {role}
             Location: {location}
             Available Items: {DisplayAllItems}
-			<Search details={initialDetails}/>
+		    <Search details={initialDetails}/>
 
             <p>{role}</p>
             <p>Location: {location}</p>
