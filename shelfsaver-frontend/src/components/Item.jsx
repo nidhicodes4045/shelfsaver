@@ -24,32 +24,89 @@ export function ItemDisplay(props) {
             <p>Quantity: {props.quantity}</p>
             <p>Expires: {props.expiration}</p>
             <p>Description: {props.description}</p>
+            <button onClick={addItemToShoppingCart}>Add to Shopping Cart</button>
+            <button onClick={removeItemFromShoppingCart}>Remove from Shopping Cart</button>
         </div>
     );
 }
 
+ShoppingCartDisplay.propTypes = {
+    cartItems: PropTypes.element
+}
+
+export function ShoppingCartDisplay(props) {
+    return (
+        <>
+        {
+            props.cartItems.map(function(item) {
+                <ItemDisplay name={item.name} price={item.price} quantity={item.quantity} />
+            })
+        }
+        </>
+    );
+}
+
+/**
+ * This function is used by users with the 'Buyer' role only
+ * @param {*} item 
+ */
+async function addItemToShoppingCart(item) {
+    try {
+        await axios.post('http://localhost:8080/api/shoppingCart', {item});
+        alert('Item successfully added to your shopping cart!');
+    } catch (error) {
+        console.log('Error adding item to shopping cart: ', error);
+    }
+}
+
+/**
+ * This function is used by users with the 'Buyer' role only
+ * @param {*} id
+ */
+async function removeItemFromShoppingCart(id) {
+    try {
+        await axios.delete(`http://localhost:8080/api/shoppingCart/${id}`);
+        alert('Item successfully removed from your shopping cart!');
+    } catch (error) {
+        console.log('Error removing item from shopping cart: ', error);
+    }
+}
+
+/**
+ * This function is used by users with the 'Seller' role only
+ * @param {*} item 
+ */
 async function addItem(item) {
     try {
         await axios.post('http://localhost:8080/api/items', { item });
-        alert('Item successfully added!');
+        alert('Item successfully added to database!');
     } catch (error) {
         console.error('Error creating data: ', error);
     }
 }
 
+/**
+ * This function is used by users with the 'Seller' role only
+ * @param {*} id 
+ * @param {*} updatedItem 
+ */
 async function editItem(id, updatedItem) {
     try {
         await axios.put(`http://localhost:8080/api/items/${id}`, { updatedItem });
-        alert('Item successfully edited!');
+        alert('Item successfully edited in database!');
     } catch (error) {
         console.error('Error editing data: ', error);
     }
 }
 
+/**
+ * This function is used by users with the 'Seller' role only
+ * @param {*} id 
+ */
 async function removeItem(id) {
     try {
         await axios.delete(`http://localhost:8080/api/items/${id}`);
-        alert('Item successfully deleted!');
+        alert('Item successfully deleted from database!');
     } catch (error){
         console.error('Error deleting data: ', error);
     }
@@ -96,7 +153,7 @@ class Item {
 }
 
 /**
- * 
+ * Creates a form that calls the respective async functions to interact with the API to edit the items database
  * @returns 
  */
 export function ItemForm() {
@@ -155,6 +212,10 @@ export function ItemForm() {
     )
 }
 
+/**
+ * Fetches all items from the items database with an API call and displays them each in their own card
+ * @returns 
+ */
 export function DisplayAllItems() {
     const [itemsList, setItemsList] = useState(null);
 
@@ -167,7 +228,7 @@ export function DisplayAllItems() {
             // Set a timeout for 1000ms (1s) before fetching the data so that users get to see my beautiful loading screen <3
             await new Promise(resolve => setTimeout(resolve, 1000));
     
-            const response = await fetch('http://localhost:8080/api/test');
+            const response = await fetch('http://localhost:8080/api/getItems');
             if (!response.ok) {
               throw new Error(`HTTP error! Status: ${response.status}`);
             }
@@ -180,11 +241,13 @@ export function DisplayAllItems() {
         fetchData();
       }, []);
 
-      return (
+    return (
         <div>
-            {/* {itemsList.map(item) => {
-                <ItemDisplay name = item.name />
-            }} */}
+        {
+        itemsList.map(function(item) {
+            <ItemDisplay name={item.name} price={item.price} description={item.description} expiration={item.expiration} quantity={item.quantity}/>
+        })
+        }
         </div>
-      )
+    );
 }
