@@ -1,4 +1,12 @@
-com/example/ShelfSaver/MongoClientConnectionExample.class
-com/example/ShelfSaver/ShelfSaverController.class
-com/example/ShelfSaver/ShelfSaverApplication.class
-com/example/ShelfSaver/QuickStart.class
+com\shelfsaver\entity\Role.class
+com\shelfsaver\repository\BuyerRepository.class
+com\shelfsaver\repository\GroceryItemRepository.class
+com\shelfsaver\ShelfSaverApplication.class
+SellerController.class
+com\shelfsaver\entity\GroceryItem.class
+com\shelfsaver\repository\SellerRepository.class
+com\shelfsaver\entity\RoleName.class
+com\shelfsaver\service\BuyerService.class
+com\shelfsaver\entity\Seller.class
+com\shelfsaver\entity\Buyer.class
+RoleRepository.class

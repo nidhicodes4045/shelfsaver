@@ -1,4 +1,4 @@
-package com.example.ShelfSaver;
+package com.shelfsaver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,14 +21,14 @@ public class ShelfSaverApplication {
 		SpringApplication.run(ShelfSaverApplication.class, args);
 	}
 
-	/**
-	 * Runs on start up
-	 */
-	@Bean
-	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
-		return args -> {
-			System.out.println("Running the ShelfSaver Java Application...");
-		};
-	}
+	// /**
+	//  * Runs on start up
+	//  */
+	// @Bean
+	// public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
+	// 	return args -> {
+	// 		System.out.println("Running the ShelfSaver Java Application...");
+	// 	};
+	// }
 
 }
