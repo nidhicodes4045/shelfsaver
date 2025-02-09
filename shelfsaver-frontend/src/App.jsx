@@ -1,7 +1,14 @@
 import { useEffect, useState } from 'react';
 import Loading from './components/Loading';
 import './App.css'
+<<<<<<< HEAD
+import Login from './Login';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+
+
+=======
 import { ItemForm } from './components/Item';
+>>>>>>> f956eb5167fb3e8566193e33b2a531b012fae2b5
 
 function App() {
   const [data, setData] = useState([]);
@@ -45,10 +52,14 @@ function App() {
 
   return (
     <>
+<<<<<<< HEAD
+		<Login/>
+=======
       <h3 className='glowing-text'>&lt;ShelfSaver&gt;</h3>
       <img src='src/assets/wizard.png' height={300}></img>
       <ItemForm/>
       <p>Received &quot;{data}&quot; from Spring Boot backend</p>
+>>>>>>> f956eb5167fb3e8566193e33b2a531b012fae2b5
     </>
   )
 }
