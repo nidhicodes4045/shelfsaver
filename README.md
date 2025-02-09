@@ -19,7 +19,7 @@ mvn spring-boot:run
 ```
 Use ```Ctrl + C``` to stop running the application.
 
-Go to ```localhost:8080``` to see the served content from Spring Boot, including API endpoints!
+Go to ```http://localhost:8080``` to see the served content from Spring Boot, including API endpoints!
 
 Next, run the React application, which serves as the frontend for the project.
 
@@ -31,7 +31,7 @@ Use ```Ctrl + C``` to stop running the dev server.
 
 Go to ```http://localhost:5173/``` to see the webpage!
 # Asset Credits
-[Flame animation](https://pixabay.com/gifs/fire-heat-toon-flame-hot-3352/)
-[Wizard stock image](https://pngimg.com/image/104822)
-[Magic School Fonts](https://www.dafont.com/magic-school.font)
-[Dragon Vector art](https://pixabay.com/vectors/animal-beast-creature-dragon-drake-2027043/)
+- [Flame animation](https://pixabay.com/gifs/fire-heat-toon-flame-hot-3352/)
+- [Wizard stock image](https://pngimg.com/image/104822)
+- [Magic School Fonts](https://www.dafont.com/magic-school.font)
+- [Dragon Vector art](https://pixabay.com/vectors/animal-beast-creature-dragon-drake-2027043/)
