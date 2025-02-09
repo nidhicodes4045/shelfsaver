@@ -13,16 +13,24 @@ import {
 from 'mdb-react-ui-kit';
 import SignUpBuyer from './SignUpBuyer';
 import SignUpSeller from './SignUpSeller';
+import { ItemForm } from './components/Item';
 
 function Login() {
 	const [showSignUpBuyer, setShowSignUpBuyer] = useState(false);
 	const [showSignUpSeller, setShowSignUpSeller] = useState(false);
+	const [showAddItem, setShowAddItem] = useState(false);
+
 
 	if (showSignUpBuyer) {
   		return <SignUpBuyer onBackToLogin={() => setShowSignUpBuyer(false)} />;
 	}
 	if (showSignUpSeller) {
  		return <SignUpSeller onBackToLogin={() => setShowSignUpSeller(false)} />;
+	}
+	if (showAddItem) {
+		return <><h3 className='glowing-text'>&lt;ShelfSaver&gt;</h3>
+      <img src='src/assets/wizard.png' height={300}></img>
+      <ItemForm/></>
 	}
 
 
@@ -44,7 +52,7 @@ function Login() {
               <p className="small mb-3 pb-lg-2"><a className="text-white-50" href="#!">Forgot password?</a></p>
               <MDBRow className='justify-content-center'>
 				<MDBCol size='auto'>
-					<MDBBtn outline className='mx-2 px-5 hover-overlay hover-light custom-btn' color='white' size='lg'>
+					<MDBBtn outline className='mx-2 px-5 hover-overlay hover-light custom-btn' color='white' size='lg' onClick={() => setShowAddItem(true)}>
 					Login
 					</MDBBtn>
 				</MDBCol>
