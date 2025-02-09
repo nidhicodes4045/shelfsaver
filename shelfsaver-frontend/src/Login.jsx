@@ -44,31 +44,24 @@ function Login() {
           <MDBCard className='bg-dark text-white my-5 mx-auto' style={{borderRadius: '1rem', maxWidth: '800px'}}>
             <MDBCardBody className='p-5 d-flex flex-column align-items-center mx-auto w-100'>
 
-              <h2 className="fw-bold mb-2 text-uppercase">Welcome to Shelf Saver!</h2>
-              <p className="text-white-50 mb-5">Please enter your username and password:</p>
+              <h2 className="fw-bold mb-2 text-uppercase title">Welcome to Shelf Saver!</h2>
+              <p className="text-white-50 mb-5 directions">Please enter your username and password:</p>
 
-              <MDBInput wrapperClass='mb-4 mx-5 w-100 user-input' labelClass='text-white' label='Username' id='formControlLg' type='username' size="lg"/>
-              <MDBInput wrapperClass='mb-4 mx-5 w-100 user-input' labelClass='text-white' label='Password' id='formControlLg' type='password' size="lg"/>
-
-              <p className="small mb-3 pb-lg-2"><a className="text-white-50" href="#!">Forgot password?</a></p>
-              <MDBRow className='justify-content-center'>
-				<MDBCol size='auto'>
-					<MDBBtn outline className='mx-2 px-5 hover-overlay hover-light custom-btn' color='white' size='lg' onClick={() => setShowAddItem(true)}>
+              <MDBInput wrapperClass='mb-4 mx-5 w-100 user-input' labelClass='text-white textbox-label' label='Username' id='formControlLg' type='username' size="lg"/>
+			  <MDBInput wrapperClass='mb-4 mx-5 w-100 user-input' labelClass='text-white textbox-label' label='Password' id='formControlLg' type='password' size="lg"/>
+			<MDBBtn outline className='mx-5 mb-4 px-5 hover-overlay hover-light custom-btn large-btn' color='white' size='lg' onClick={() => setShowAddItem(true)}>
 					Login
-					</MDBBtn>
-				</MDBCol>
-			  </MDBRow>
-				<br></br><br></br>
+			  </MDBBtn>
 
-              <div>
-				<p className="mb-2">Don&#39;t have an account? Sign up as a:</p>
-				<MDBRow className='justify-content-center'>
+              <div className="mt-4">
+				<p style={{ marginTop: 0, paddingTop: 0 }} className="mb-0 directions no-margin">Don&#39;t have an account? Sign up as a:</p>
+				<MDBRow style={{ marginTop: 0, paddingTop: 0 }} className='justify-content-center mt-[-100px] no-margin'>
 					<MDBCol size='auto'>
 					<MDBBtn 
 						outline 
-						className='mx-2 px-5 hover-overlay hover-light custom-btn' 
+						className='mx-2 px-5 hover-overlay hover-light custom-btn medium-btn' 
 						color='white' 
-						size='sm'
+						size='md'
 						onClick={() => setShowSignUpBuyer(true)}
 					>
 						Buyer
@@ -77,9 +70,9 @@ function Login() {
 					<MDBCol size='auto'>
 					<MDBBtn 
 						outline 
-						className='mx-2 px-5 hover-overlay hover-light custom-btn' 
+						className='mx-2 px-5 hover-overlay hover-light custom-btn medium-btn' 
 						color='white' 
-						size='sm'
+						size='md'
 						onClick={() => setShowSignUpSeller(true)}
 					>
 						Seller

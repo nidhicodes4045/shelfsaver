@@ -31,3 +31,49 @@
   color: white !important;
 }
 
+.textbox-label {
+	font-size: 0.3em !important;
+}
+
+.textbox-label-small {
+	font-size: 0.2em !important;
+}
+
+.title {
+  color: #00b3db !important;
+  font-size: 1.2em;
+  line-height: 1.1;
+}
+
+.directions {
+  color: white !important;
+  font-size: 0.5em;
+  line-height: 1.1;
+}
+
+.custom-btn {
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #00b3db !important;
+}
+
+.large-btn {
+  font-size: 1.8rem !important;
+}
+
+.medium-btn {
+  font-size: 1.2rem !important;
+  margin-top: 0 !important;
+}
+
+.no-margin {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+p.no-margin {
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
+}
