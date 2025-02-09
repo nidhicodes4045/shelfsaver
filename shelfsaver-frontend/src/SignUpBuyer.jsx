@@ -26,10 +26,10 @@ function SignUpBuyer({onBackToLogin}) {
               <h2 className="fw-bold mb-2 text-uppercase title">Sign Up as a buyer</h2>
               <p className="text-white-50 mb-5 directions">Please fill out the fields with your information:</p>
 
-              <MDBInput wrapperClass='mb-4 mx-5 w-100 user-input' labelClass='text-white textbox-label' label='Name' id='formControlLg' type='name' size="lg"/>
-              <MDBInput wrapperClass='mb-4 mx-5 w-100 user-input' labelClass='text-white textbox-label' label='Username' id='formControlLg' type='username' size="lg"/>
-              <MDBInput wrapperClass='mb-4 mx-5 w-100 user-input' labelClass='text-white textbox-label' label='Password' id='formControlLg' type='password' size="lg"/>
-              <MDBInput wrapperClass='mb-4 mx-5 w-100 user-input' labelClass='text-white textbox-label' label='Repeat Password' id='formControlLg' type='password' size="lg"/>
+              <MDBInput wrapperClass='mb-4 mx-5 w-100 user-input custom-input-width' labelClass='text-white textbox-label' label='Name' id='formControlLg' type='name' size="lg"/>
+              <MDBInput wrapperClass='mb-4 mx-5 w-100 user-input custom-input-width' labelClass='text-white textbox-label' label='Username' id='formControlLg' type='username' size="lg"/>
+              <MDBInput wrapperClass='mb-4 mx-5 w-100 user-input custom-input-width' labelClass='text-white textbox-label' label='Password' id='formControlLg' type='password' size="lg"/>
+              <MDBInput wrapperClass='mb-4 mx-5 w-100 user-input custom-input-width' labelClass='text-white textbox-label' label='Repeat Password' id='formControlLg' type='password' size="lg"/>
 
 
               <MDBRow className='justify-content-center'>

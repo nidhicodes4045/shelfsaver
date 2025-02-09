@@ -47,8 +47,8 @@ function Login() {
 			  <h1 className='glowing-text'>&lt;Welcome to ShelfSaver!&gt;</h1>
               <p className="text-white-50 mb-5 directions">Please enter your username and password:</p>
 
-              <MDBInput wrapperClass='mb-4 mx-5 w-100 user-input' labelClass='text-white textbox-label' label='Username' id='formControlLg' type='username' size="lg"/>
-			  <MDBInput wrapperClass='mb-4 mx-5 w-100 user-input' labelClass='text-white textbox-label' label='Password' id='formControlLg' type='password' size="lg"/>
+              <MDBInput wrapperClass='mb-4 mx-5 w-55 user-input custom-input-width' labelClass='text-white textbox-label' label='Username' id='formControlLg' type='username' size="lg"/>
+			  <MDBInput wrapperClass='mb-4 mx-5 w-100 user-input custom-input-width' labelClass='text-white textbox-label' label='Password' id='formControlLg' type='password' size="lg"/>
 			<MDBBtn outline className='mx-5 mb-4 px-5 hover-overlay hover-light custom-btn large-btn' color='white' size='lg' onClick={() => setShowAddItem(true)}>
 					Login
 			  </MDBBtn>
