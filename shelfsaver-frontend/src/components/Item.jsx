@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 ItemDisplay.propTypes = {
@@ -152,4 +152,38 @@ export function ItemForm() {
             </form>
         </>
     )
+}
+
+export function DisplayAllItems() {
+    const [itemsList, setItemsList] = useState(null);
+
+    useEffect(() => {
+        document.title = 'ShelfSaver';
+    
+        // Fetch data from API endpoint with a GET request mapped in the Spring Boot controller
+        const fetchData = async() => {
+          try {
+            // Set a timeout for 1000ms (1s) before fetching the data so that users get to see my beautiful loading screen <3
+            await new Promise(resolve => setTimeout(resolve, 1000));
+    
+            const response = await fetch('http://localhost:8080/api/test');
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            const data = await response.data();
+            setItemsList(data);
+          } catch (error) {
+            console.log(error);
+          }
+        };
+        fetchData();
+      }, []);
+
+      return (
+        <div>
+            {/* {itemsList.map(item) => {
+                <ItemDisplay name = item.name />
+            }} */}
+        </div>
+      )
 }

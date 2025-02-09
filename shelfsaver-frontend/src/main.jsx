@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import User from './components/User.jsx'
 import { BrowserRouter, Routes, Route } from "react-router";
+import { ItemForm } from './components/Item.jsx'
 
 // Routing is done using react-router
 createRoot(document.getElementById('root')).render(
@@ -14,6 +15,8 @@ createRoot(document.getElementById('root')).render(
       
         {/* Dynamic route segment for user pages */}
         <Route path='user/:uid' element={<User />}/>
+
+        <Route path='/items' element={<ItemForm />}/>
       </Routes>
     </BrowserRouter>
   </StrictMode>,
