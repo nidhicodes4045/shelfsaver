@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import ReactSearchBox from "react-search-box";
 import axios from 'axios';
 import '../assets/styles/ItemForm.css';
+import Login from '../Login';
 
 ItemDisplay.propTypes = {
     name: PropTypes.string,
@@ -175,9 +176,15 @@ export function ItemForm() {
         setId(myItem.id);
         setItem(myItem);
     }
+	const [showItemForm, setShowItemForm] = useState(false);
+
+	if (showItemForm) {
+		return <Login/>
+	}
 
     return (
         <>
+            <button onClick={() => setShowItemForm(true)}>Back to Login</button>
             <ReactSearchBox placeholder='Search for items' value='search'/>
             <form onSubmit={createItem}>
                 <fieldset>
