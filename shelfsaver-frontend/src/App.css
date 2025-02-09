@@ -85,3 +85,11 @@ p.no-margin {
 h1.glowing-text {
 	font-size: 0.8em !important;
 }
+
+.item-card {
+  transition: background-color 0.3s ease;
+}
+
+.item-card:hover {
+  background-color: #00b3db;
+}

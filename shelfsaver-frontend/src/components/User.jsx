@@ -10,15 +10,8 @@ export default function User() {
     let location = "Raleigh, NC";
     return (
         <>
-            <p>User UID: {uid}</p>
-            {role}
-            Location: {location}
-            Available Items: {DisplayAllItems}
+            <br /> <p className='glowing-text'>&lt;Welcome to ShelfSaver!&gt;</p> <br />
 		    <Search details={initialDetails}/>
-
-            <p>{role}</p>
-            <p>Location: {location}</p>
-            <p>Available Items: {DisplayAllItems}</p>
         </>
     );
 }
