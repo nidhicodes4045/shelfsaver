@@ -1,21 +1,31 @@
 import { useEffect, useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Loading from './components/Loading';
 import './App.css'
+<<<<<<< HEAD
 import Login from './Login';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 
 
+=======
+import { ItemForm } from './components/Item';
+>>>>>>> f956eb5167fb3e8566193e33b2a531b012fae2b5
 
 function App() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // Code to run when App component is first mounted onto the DOM
   useEffect(() => {
     document.title = 'ShelfSaver';
 
     // Fetch data from API endpoint with a GET request mapped in the Spring Boot controller
     const fetchData = async() => {
       try {
+        // Set a timeout for 1000ms (1s) before fetching the data so that users get to see my beautiful loading screen <3
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
         const response = await fetch('http://localhost:8080/api/test');
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -32,7 +42,9 @@ function App() {
   }, []);
 
   if (loading) {
-    return <p>Loading data...</p>;
+    return (
+      <Loading/>
+    );
   }
 
   if (error) {
@@ -41,7 +53,15 @@ function App() {
 
   return (
     <>
+<<<<<<< HEAD
 		<Login/>
+=======
+      <h3 className='glowing-text'>&lt;ShelfSaver&gt;</h3>
+      <img src='src/assets/wizard.png' height={300}></img>
+      <ItemForm/>
+      <p>Received &quot;{data}&quot; from Spring Boot backend</p>
+      <Button text="Hello, World"/>
+>>>>>>> f956eb5167fb3e8566193e33b2a531b012fae2b5
     </>
   )
 }

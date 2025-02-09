@@ -5,7 +5,7 @@ HackNC State '25
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [Maven](https://maven.apache.org/)
 - [Vite](https://vite.dev/)
-- [React 19](https://react.dev/)
+- [React v19](https://react.dev/)
 # How to Run Project
 First, start running the Spring Boot application, which serves as the backend for the project.
 
@@ -27,5 +27,11 @@ Navigate to /shelfsaver-frontend and run:
 ```
 npm run dev
 ```
+Use ```Ctrl + C``` to stop running the dev server.
 
-Go to ```http://localhost:5173/``` to see the webpgae!
+Go to ```http://localhost:5173/``` to see the webpage!
+# Asset Credits
+[Flame animation](https://pixabay.com/gifs/fire-heat-toon-flame-hot-3352/)
+[Wizard stock image](https://pngimg.com/image/104822)
+[Magic School Fonts](https://www.dafont.com/magic-school.font)
+[Dragon Vector art](https://pixabay.com/vectors/animal-beast-creature-dragon-drake-2027043/)
