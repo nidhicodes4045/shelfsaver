@@ -44,7 +44,7 @@ function Login() {
           <MDBCard className='bg-dark text-white my-5 mx-auto' style={{borderRadius: '1rem', maxWidth: '800px'}}>
             <MDBCardBody className='p-5 d-flex flex-column align-items-center mx-auto w-100'>
 
-              <h2 className="fw-bold mb-2 text-uppercase title">Welcome to Shelf Saver!</h2>
+			  <h1 className='glowing-text'>&lt;Welcome to ShelfSaver!&gt;</h1>
               <p className="text-white-50 mb-5 directions">Please enter your username and password:</p>
 
               <MDBInput wrapperClass='mb-4 mx-5 w-100 user-input' labelClass='text-white textbox-label' label='Username' id='formControlLg' type='username' size="lg"/>

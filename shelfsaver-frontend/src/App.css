@@ -41,7 +41,7 @@
 
 .title {
   color: #00b3db !important;
-  font-size: 1.2em;
+  font-size: 1em;
   line-height: 1.1;
 }
 
@@ -76,4 +76,8 @@
 p.no-margin {
 	margin-bottom: 0 !important;
 	padding-bottom: 0 !important;
+}
+
+h1.glowing-text {
+	font-size: 0.8em !important;
 }
