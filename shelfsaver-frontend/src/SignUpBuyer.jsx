@@ -1,4 +1,5 @@
 import React from 'react';
+const { useState } = React;
 import {
   MDBBtn,
   MDBContainer,
@@ -11,8 +12,14 @@ import {
   MDBIcon
 }
 from 'mdb-react-ui-kit';
+import User from './components/User';
 
 function SignUpBuyer({onBackToLogin}) {
+	const [showSignUpBuyer, setshowSignUpBuyer] = useState(false);
+	if (showSignUpBuyer) {
+ 		return <User />;
+	}	
+
   return (
 	<MDBContainer fluid>
 
@@ -34,7 +41,7 @@ function SignUpBuyer({onBackToLogin}) {
 
               <MDBRow className='justify-content-center'>
 				<MDBCol size='auto'>
-					<MDBBtn outline className='mx-2 px-5 mb-3 hover-overlay hover-light custom-btn large-btn' color='white' size='lg'>
+					<MDBBtn onClick={() => setshowSignUpBuyer(true)} outline className='mx-2 px-5 mb-3 hover-overlay hover-light custom-btn large-btn' color='white' size='lg'>
 					Sign Up for ShelfSaver
 					</MDBBtn>
 				</MDBCol>

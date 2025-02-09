@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
 import SearchList from './SearchList';
+import ShoppingCartIcon from './ShoppingCartIcon';
 import '../assets/styles/UserPage.css';
 
 function Search({ details }) {
 
   const [searchField, setSearchField] = useState("");
+  const [cartCount, setCartCount] = useState(0);
+
+  const incrementCartCount = () => {
+  setCartCount(prevCount => prevCount + 1);
+};
+
+
 
   const filteredItems = details.filter(
     item => {
@@ -23,8 +31,7 @@ function Search({ details }) {
 
   function searchList() {
     return (
-      <SearchList filteredItems={filteredItems} />
-    );
+		<SearchList filteredItems={filteredItems} incrementCartCount={incrementCartCount} />    );
   }
 
   return (
@@ -41,7 +48,7 @@ function Search({ details }) {
           onChange={handleChange}
         />
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
-        </section>
+		<ShoppingCartIcon count={cartCount} />	</section>
       </div>
 		<br />
       {searchList()}
