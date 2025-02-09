@@ -26,3 +26,22 @@ body {
     text-shadow: 0 0 20px #fff, 0 0 30px #ffac4d, 0 0 40px #ffa64d, 0 0 50px #ff854d, 0 0 60px #ff7a4d, 0 0 70px #ff744d, 0 0 80px #ff7a4d;
   }
 }
+
+.button {
+  color: black;
+}
+
+fieldset {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1rem;
+}
+
+form label {
+  font-size: 2rem;
+}
+
+form section {
+  display: flex;
+  flex-direction: column;
+}
