@@ -1,5 +1,9 @@
 import { useEffect, useState } from 'react';
 import './App.css'
+import Login from './Login';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+
+
 
 function App() {
   const [data, setData] = useState([]);
@@ -37,7 +41,7 @@ function App() {
 
   return (
     <>
-      <p>Received &quot;{data}&quot; from Spring Boot backend</p>
+		<Login/>
     </>
   )
 }

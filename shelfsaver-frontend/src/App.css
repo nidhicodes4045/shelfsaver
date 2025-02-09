@@ -40,3 +40,33 @@
 .read-the-docs {
   color: #888;
 }
+
+.custom-btn {
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #00b3db !important;
+}
+
+.signup-link {
+  transition: color 0.3s ease;
+}
+
+.signup-link:hover {
+  color: #00b3db !important;
+  text-decoration: underline;
+}
+
+.user-input input {
+  color: #00b3db !important;
+}
+
+.user-input input::placeholder {
+  color: #aaa !important;
+}
+
+.user-input input:focus {
+  color: white !important;
+}
+
