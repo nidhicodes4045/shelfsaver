@@ -41,7 +41,7 @@ function Login() {
               <MDBInput wrapperClass='mb-4 mx-5 w-100 user-input' labelClass='text-white' label='Username' id='formControlLg' type='username' size="lg"/>
               <MDBInput wrapperClass='mb-4 mx-5 w-100 user-input' labelClass='text-white' label='Password' id='formControlLg' type='password' size="lg"/>
 
-              <p className="small mb-3 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+              <p className="small mb-3 pb-lg-2"><a className="text-white-50" href="#!">Forgot password?</a></p>
               <MDBRow className='justify-content-center'>
 				<MDBCol size='auto'>
 					<MDBBtn outline className='mx-2 px-5 hover-overlay hover-light custom-btn' color='white' size='lg'>
@@ -52,7 +52,7 @@ function Login() {
 				<br></br><br></br>
 
               <div>
-				<p className="mb-2">Don't have an account? Sign up as a:</p>
+				<p className="mb-2">Don&#39;t have an account? Sign up as a:</p>
 				<MDBRow className='justify-content-center'>
 					<MDBCol size='auto'>
 					<MDBBtn 

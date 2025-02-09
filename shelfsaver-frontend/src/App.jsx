@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Loading from './components/Loading';
+import Login from './Login';
 import './App.css'
 import { ItemForm } from './components/Item';
 
@@ -45,9 +46,9 @@ function App() {
 
   return (
     <>
-		<Login/>
       <h3 className='glowing-text'>&lt;ShelfSaver&gt;</h3>
       <img src='src/assets/wizard.png' height={300}></img>
+      <Login/>
       <ItemForm/>
       <p>Received &quot;{data}&quot; from Spring Boot backend</p>
     </>
