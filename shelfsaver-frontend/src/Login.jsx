@@ -14,6 +14,7 @@ from 'mdb-react-ui-kit';
 import SignUpBuyer from './SignUpBuyer';
 import SignUpSeller from './SignUpSeller';
 import { ItemForm } from './components/Item';
+import './App.css'
 
 function Login() {
 	const [showSignUpBuyer, setShowSignUpBuyer] = useState(false);
