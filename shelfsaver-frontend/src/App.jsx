@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import Loading from './components/Loading';
 import Login from './Login';
-import './App.css'
+import './App.css';
+
 
 function App() {
   const [data, setData] = useState([]);
