@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Loading from './components/Loading';
 import './App.css'
 import { ItemForm } from './components/Item';
@@ -50,7 +49,6 @@ function App() {
       <img src='src/assets/wizard.png' height={300}></img>
       <ItemForm/>
       <p>Received &quot;{data}&quot; from Spring Boot backend</p>
-      <Button text="Hello, World"/>
     </>
   )
 }

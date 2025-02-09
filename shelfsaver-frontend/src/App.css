@@ -27,8 +27,11 @@ body {
   }
 }
 
-.button {
+.item-form-button {
   color: black;
+  padding: 1rem 2rem 1rem 2rem;
+  margin: 1rem;
+  border-radius: 16px;
 }
 
 .input-container {
@@ -44,6 +47,10 @@ form p {
 
 form label {
   font-size: 2rem;
+}
+
+fieldset {
+  border-radius: 20px;
 }
 
 form section {

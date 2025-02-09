@@ -54,22 +54,31 @@ async function removeItem(id) {
     }
 }
 
-function ItemFormSubmitButton(method, type, id, item) {
+ItemFormSubmitButton.propTypes = {
+    method: PropTypes.string,
+    buttonText: PropTypes.string,
+    id: PropTypes.string,
+    item: PropTypes.node
+}
+
+function ItemFormSubmitButton(props) {
     // Event listener for the button, calls the respective async function
     function handleClick() {
-        if (method === "add") {
-            addItem(item);
+        if (props.method === "add") {
+            addItem(props.item);
         }
-        else if (method === "edit") {
-            editItem(id, item);
+        else if (props.method === "edit") {
+            editItem(props.id, props.item);
         }
-        else if (method === 'delete') {
-            removeItem(id);
+        else if (props.method === 'delete') {
+            removeItem(props.id);
         }
     }
     return (
         <>
-            <button onClick={handleClick(method)} className='button'>{type}</button>
+            <button type='submit' onClick={handleClick(props.method)} className='item-form-button'>
+                <p>{String(props.buttonText)}</p>
+            </button>
         </>
     )
 }
@@ -115,31 +124,31 @@ export function ItemForm() {
                 <p>Add an Item:</p>
                     <div className='input-container'>
                         <section>
-                            <label>Name</label>
-                            <input type='text' name='name' required></input>
+                            <label htmlFor='name'>Name</label>
+                            <input type='text' name='name' id='name' autoComplete='off' required></input>
                         </section>
                         <section>
-                            <label>Price</label>
-                            <input type='number' name='price' required></input>
+                            <label htmlFor='price'>Price</label>
+                            <input type='number' name='price' id='price' autoComplete='off' required></input>
                         </section>
                         <section>
-                            <label>Quantity</label>
-                            <input type='number' name='quantity' required></input>
+                            <label htmlFor='quantity'>Quantity</label>
+                            <input type='number' name='quantity' id='quantity' autoComplete='off' required></input>
                         </section>
                         <section>
                             {/* Expiration date should only be in the future, not the past */}
-                            <label>Expiration Date</label>
-                            <input type='date' name='expiration' min={minDate} required></input>
+                            <label htmlFor='expiration'>Expiration Date</label>
+                            <input type='date' name='expiration' id='expiration' min={minDate} autoComplete='off' required></input>
                         </section>
                         <section>
-                            <label>Description</label>
-                            <input type='text' name='description' required></input>
+                            <label htmlFor='description'>Description</label>
+                            <input type='text' name='description' id='description' autoComplete='off' required></input>
                         </section>
                     </div>
+                    <ItemFormSubmitButton method="add" buttonText="Add" id={id} item={item}/>
+                    <ItemFormSubmitButton method="edit" buttonText="Edit" id={id} item={item}/>
+                    <ItemFormSubmitButton method="delete" buttonText="Delete" id={id} item={item}/>
                 </fieldset>
-                <ItemFormSubmitButton method="add" type="Add" id={id} item={item}/>
-                <ItemFormSubmitButton method="edit" type="Edit" id={id} item={item}/>
-                <ItemFormSubmitButton method="delete" type="Delete" id={id} item={item}/>
             </form>
         </>
     )
