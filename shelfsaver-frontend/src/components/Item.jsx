@@ -111,30 +111,31 @@ export function ItemForm() {
     return (
         <>
             <form onSubmit={createItem}>
-                <h4>Add an Item:</h4>
                 <fieldset>
-                    <section>
-                    <label>Name</label>
-                    <input type='text' required></input>
-                    </section>
-                    <section>
-                    <label>Price</label>
-                    <input type='number' required></input>
-                    </section>
-                    <section>
-                    <label>Quantity</label>
-                    {/* An item's quantity can only be an integer */}
-                    <input type='number' step="1" required></input>
-                    </section>
-                    <section>
-                    {/* Expiration date should only be in the future, not the past */}
-                    <label>Expiration Date</label>
-                    <input type='date' min={minDate} required></input>
-                    </section>
-                    <section>
-                    <label>Description</label>
-                    <input type='text' required></input>
-                    </section>
+                <p>Add an Item:</p>
+                    <div className='input-container'>
+                        <section>
+                            <label>Name</label>
+                            <input type='text' name='name' required></input>
+                        </section>
+                        <section>
+                            <label>Price</label>
+                            <input type='number' name='price' required></input>
+                        </section>
+                        <section>
+                            <label>Quantity</label>
+                            <input type='number' name='quantity' required></input>
+                        </section>
+                        <section>
+                            {/* Expiration date should only be in the future, not the past */}
+                            <label>Expiration Date</label>
+                            <input type='date' name='expiration' min={minDate} required></input>
+                        </section>
+                        <section>
+                            <label>Description</label>
+                            <input type='text' name='description' required></input>
+                        </section>
+                    </div>
                 </fieldset>
                 <ItemFormSubmitButton method="add" type="Add" id={id} item={item}/>
                 <ItemFormSubmitButton method="edit" type="Edit" id={id} item={item}/>

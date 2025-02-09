@@ -11,7 +11,7 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />}/>
-        
+      
         {/* Dynamic route segment for user pages */}
         <Route path='user/:uid' element={<User />}/>
       </Routes>

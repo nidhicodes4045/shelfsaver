@@ -29,6 +29,9 @@ npm run dev
 ```
 Use ```Ctrl + C``` to stop running the dev server.
 
-Go to ```http://localhost:5173/``` to see the webpgae!
+Go to ```http://localhost:5173/``` to see the webpage!
 # Asset Credits
+[Flame animation](https://pixabay.com/gifs/fire-heat-toon-flame-hot-3352/)
 [Wizard stock image](https://pngimg.com/image/104822)
+[Magic School Fonts](https://www.dafont.com/magic-school.font)
+[Dragon Vector art](https://pixabay.com/vectors/animal-beast-creature-dragon-drake-2027043/)
