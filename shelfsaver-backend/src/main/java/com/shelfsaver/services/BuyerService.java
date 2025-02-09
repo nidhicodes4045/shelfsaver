@@ -10,6 +10,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Generated with the help of ChatGPT
+ */
 @Service
 public class BuyerService {
 
@@ -19,7 +22,6 @@ public class BuyerService {
     @Autowired
     private GroceryItemRepository groceryItemRepository;
 
-    // Add an item to the buyer's cart
     public boolean addItemToCart(Long buyerId, Long itemId) {
         Optional<Buyer> buyerOpt = buyerRepository.findById(buyerId);
         Optional<GroceryItem> groceryItemOpt = groceryItemRepository.findById(itemId);
